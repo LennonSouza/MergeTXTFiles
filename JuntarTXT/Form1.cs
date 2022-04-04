@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace JuntarTXT
@@ -24,7 +20,7 @@ namespace JuntarTXT
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_join_Click(object sender, EventArgs e)
         {
             IEnumerable<string> files = Directory.GetFiles(this.txt_path.Text, "*.*", SearchOption.AllDirectories).Where(f => f.EndsWith(".txt"));
             bool flag = files.Count() != 0;
